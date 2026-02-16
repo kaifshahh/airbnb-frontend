@@ -1,16 +1,49 @@
-# React + Vite
+# 🌐 Airbnb Clone - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend for the Airbnb clone, built with **React** and **Tailwind CSS**. It provides a sleek, interactive user experience for browsing and hosting properties.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- **Dynamic Browsing:** Home listings fetched from the Node.js API.
+- **GSAP Animations:** Smooth entrance animations for a premium feel.
+- **Context API:** Global state management for Authentication and Favorites.
+- **Protected Routes:** Only authenticated users can access hosting features.
+- **Responsive Layout:** Optimized for all screen sizes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **React.js (Vite)**
+- **Tailwind CSS**
+- **GSAP**
+- **Lucide Icons**
+- **React Router**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💻 Local Development
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create a `.env` file:
+   ```env
+   VITE_API_URL=http://localhost:3000
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🔗 Project Structure
+
+- `src/components`: Reusable UI components like `HomeCard`.
+- `src/pages`: Main view components (Home, Host, Favorites).
+- `src/context`: Authentication and User state logic.
+- `src/layouts`: Navigation and layout wrappers.
+
+---
+
+Part of the [Airbnb Fullstack](https://github.com/kaifshahh/airbnb-fullstack) project.
