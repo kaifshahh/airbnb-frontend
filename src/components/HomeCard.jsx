@@ -68,7 +68,11 @@ const HomeCard = ({ home }) => {
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 w-full max-w-sm">
       <Link to={`/homes/${homeId}`}>
         <img
-          src={`${import.meta.env.VITE_API_URL}/${home.photo}`}
+          src={
+            home.photo?.startsWith("http")
+              ? home.photo
+              : `${import.meta.env.VITE_API_URL}/${home.photo}`
+          }
           alt={home.houseName}
           className="w-full h-48 object-cover"
           crossOrigin="anonymous"

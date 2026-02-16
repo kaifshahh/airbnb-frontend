@@ -54,7 +54,11 @@ const HomeDetailsPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="rounded-lg overflow-hidden">
           <img
-            src={`${import.meta.env.VITE_API_URL}/${home.photo}`}
+            src={
+              home.photo?.startsWith("http")
+                ? home.photo
+                : `${import.meta.env.VITE_API_URL}/${home.photo}`
+            }
             alt={home.houseName}
             className="w-full h-96 object-cover"
             crossOrigin="anonymous"
